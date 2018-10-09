@@ -12,6 +12,11 @@ var servers = {};
 
 client.login(process.env.TOKEN);
 
+bot.on("guildMemberAdd", member =>{
+  let role = member.addRole("name", "Abonné Ready");
+  member.addRole(role)
+})
+
 function play(connection, message) {
   
   var server = servers[message.guild.id];
