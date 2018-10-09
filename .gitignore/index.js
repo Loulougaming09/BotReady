@@ -31,7 +31,7 @@ function play(connection, message) {
 client.on("ready", () => {
 
     console.log("Je suis prêt !");
-    client.user.setGame("Le Bot Discord BoomScp !  :D");
+    client.user.setGame("Bot by READY_  :D");
 
 });
 
