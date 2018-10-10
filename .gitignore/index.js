@@ -31,7 +31,7 @@ function play(connection, message) {
 client.on("ready", () => {
 
     console.log("Je suis prêt !");
-    client.user.setGame(" S'abonner et Liker toutes les vidéos de READY_ :D");
+    client.user.setGame("S'abonner et Liker toutes les vidéos de READY_ :D");
 
 });
 
