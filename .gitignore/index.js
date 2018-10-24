@@ -28,6 +28,19 @@ function play(connection, message) {
   });
 }
 
+client.on("guildMemberAdd", member => {
+  member.guild.channels.find("name", "départs-arrivées🆕").send(`:smiley: Bienvenue à toi ${member} dans la TEAM Ready_ Passe un bon moment ;) . Il faut Accepter le réglement pour pouvoir Chatter !  `)
+})
+
+client.on("guildMemberRemove", member => {
+    member.guild.channels.find("name", "départs-arrivées🆕").send(`${member} vient de quitter la TEAM :sob: bonne chance ! `)
+})
+
+client.on("guildMemberAdd", member => {
+    var role = member.guild.roles.find('name', 'Nouveau');
+    member.addRole(role)
+})
+
 client.on("ready", () => {
 
     console.log("Je suis prêt !");
